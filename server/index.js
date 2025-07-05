@@ -63,6 +63,10 @@ app.get('/',(req,res)=>{
 	})
 })
 
+app.use(cors({
+	origin:["http://localhost:8080","https://study-notion-full.vercel.app/"]
+}));
+
 // Listening to the server
 app.listen(PORT, () => {
 	console.log(`App is listening at ${PORT}`);
