@@ -56,6 +56,13 @@ app.get("/", (req, res) => {
 	});
 });
 
+app.get('/',(req,res)=>{
+	res.send({
+		activeStatus:true,
+		error:false,
+	})
+})
+
 // Listening to the server
 app.listen(PORT, () => {
 	console.log(`App is listening at ${PORT}`);
